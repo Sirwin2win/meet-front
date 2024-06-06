@@ -10,7 +10,7 @@ const Products = () => {
   useEffect(() => {
     const fetchCategory = async () => {
       try {
-        const res = await axios.get("https://meet-midy.onrender.com//api/products/");
+        const res = await axios.get("https://meet-midy.onrender.com/api/products/");
         setCategory(res.data);
       } catch (error) {
         console.log("Error fetching data", error);
@@ -26,7 +26,7 @@ const Products = () => {
             <Card style={{ width: "18rem" }}>
               <Card.Img
                 variant="top"
-                src={"http://localhost:5000/images/" + v.image}
+                src={"https://meet-midy.onrender.com/images/" + v.image}
                 className="prod"
               />
               <Card.Body>
