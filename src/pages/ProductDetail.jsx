@@ -13,7 +13,7 @@ const ProductDetail = () => {
     useEffect (()=>{
         const fetchProduct = async ()=>{
             try {
-              const res = await axios.get(`http://localhost:5000/api/products/${id}/`);
+              const res = await axios.get(`https://meet-midy.onrender.com/api/products/${id}/`);
               console.log(res)
               setProduct(res.data);
             } catch (error) {
@@ -32,7 +32,7 @@ const ProductDetail = () => {
       <div className="row">
         <div className="col">
       <div className="card">
-  <img className="product-detail" src={'http://localhost:5000/images/'+product.image} alt="" />
+  <img className="product-detail" src={'https://meet-midy.onrender.com/images/'+product.image} alt="" />
   </div></div>
   <div className="col">
   <div className="card-body">
