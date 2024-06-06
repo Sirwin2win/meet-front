@@ -10,7 +10,7 @@ const ManageProduct = () => {
   useEffect(() => {
     const fetchCategory = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/products/");
+        const res = await axios.get("https://meet-midy.onrender.com/api/products/");
         setCategory(res.data);
       } catch (error) {
         console.log("Error fetching data", error);
@@ -21,7 +21,7 @@ const ManageProduct = () => {
 
   const deleteProduct = async (id) => {
     try {
-      await axios.post("http://localhost:5000/api/products/remove/", {
+      await axios.post("https://meet-midy.onrender.com/api/products/remove/", {
         id: id,
       });
       // console.log("Post deleted:", id);
@@ -53,7 +53,7 @@ const ManageProduct = () => {
               <td key={v._id}> {v.description} </td>
               <td key={v._id}>
                 <img
-                  src={"http://localhost:5000/images/" + v.image}
+                  src={"https://meet-midy.onrender.com/images/" + v.image}
                   style={{ height: "50px", width: "50px" }}
                   alt=""
                 />
